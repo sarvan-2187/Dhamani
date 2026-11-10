@@ -24,8 +24,10 @@ Dhamani only pre-screens donors. It never declares anyone fit to donate; the blo
 ## How it works
 
 <p align="center">
-  <img src="docs/readme/how-it-works.svg" alt="1. Family posts a request. 2. Nearby compatible donors get a WhatsApp alert. 3. Donor taps Donate, with a quick health check and arrival time. 4. Verified donation and certificate." width="100%">
+  <img src="docs/readme/how-it-works.svg" alt="1. Donors join on WhatsApp. 2. A family asks for blood on the website. 3. Nearby compatible donors are alerted on WhatsApp. 4. A donor taps Donate, with a health check and arrival time. 5. The family sees who is coming and marks arrival. 6. The donation is verified and a certificate arrives." width="100%">
 </p>
+
+**See every screen:** [step-by-step walkthrough with screenshots](docs/WALKTHROUGH.md)
 
 <table>
   <tr>
@@ -46,10 +48,80 @@ Dhamani only pre-screens donors. It never declares anyone fit to donate; the blo
 - **Donate in three taps.** A donor taps Donate, answers a quick health check, and picks an arrival time. Answers to the check are never stored.
 - **Verified donations.** A donation counts once the donor says they donated and the family marks them as arrived.
 - **Certificates and Lifegiver badges.** Each verified donation earns a PDF certificate and badges, on the donor's private page (a 24 hour link sent on WhatsApp).
-- **Invite links.** Every donor has a code and a `JOIN` link to share. A referral counts when the new donor completes a verified donation. Recognition only, never cash, vouchers or gifts.
-- **Coordinator console.** Queues of open requests, request detail, message log, a simulation mode for demos, and top referrers per city. Coordinators never see a donor list or donor phone numbers, and every action is audited.
+- **Invite links and recognition.** Every donor has a personal invite link. Donors who bring new donors can be thanked publicly, with their consent. See [Referral recognition](#referral-recognition).
+- **Coordinator console.** A web console for the people who keep requests honest and moving. See [Coordinators and super admin](#coordinators-and-super-admin).
 - **Reminders that respect people.** Requests close themselves when they expire. Donors hear "you can donate again" only once their interval has passed.
 - **Installable.** Works as a PWA on any phone.
+
+## Referral recognition
+
+Most donors join because someone they know asked them. Dhamani makes that easy to do and fair to recognise.
+
+1. **Share a link.** Sending `STATUS` on WhatsApp returns the donor's private page and a personal invite link. The link opens WhatsApp with `JOIN` and the donor's code ready to send.
+2. **A friend joins.** The friend signs up with the same short chat, in their own language. The donor's page shows how many people joined with their link.
+3. **It counts after a real donation.** A referral counts only once the friend has a verified donation, confirmed by both the friend and the family. Sign-ups alone do not count, so the numbers cannot be padded.
+4. **Top referrers per city.** Coordinators see who brought the most donors in each city: first name, nearest city and counts only.
+5. **Ask before naming anyone.** "Ask to thank publicly" sends the donor a WhatsApp question with Yes and No. Nobody is named without a yes.
+6. **The award.** A certificate, a memento or a public thank-you, for example on 1 October, National Voluntary Blood Donation Day.
+
+<p align="center">
+  <img src="docs/console/06-referrals.jpg" alt="Console Referrals page: top referrers per city with an Ask to thank publicly button" width="820"><br>
+  <sub>Console, Referrals: a donor who brought one new donor, who then donated. Not asked yet.</sub>
+</p>
+
+> Blood donation in India is voluntary and unpaid. Dhamani never attaches cash, vouchers or gifts of value to donations or referrals: recognition only.
+
+## Coordinators and super admin
+
+Coordinators sign in at `/console/login` with an email and password. There is no public sign-up: accounts come from the seed or are created by a super admin. Sessions last 12 hours, and repeated failed logins lock the account for a while.
+
+**Coordinators can:**
+
+| Area | What it does |
+|---|---|
+| **Queues** | Held (requests that mention money), Needs slip review, Escalated (all alert waves sent, still short of donors), Reported or frozen, All open. Each tab shows a count. |
+| **Request detail** | The slip photo, the facts of the request, each alert wave with every donor's reply, confirmed donors and an activity log. |
+| **Actions** | Release a hold, approve a slip, mark verified after a phone call, freeze or unfreeze, cancel. Risky actions ask for confirmation, and every action is recorded. |
+| **Messages** | Every WhatsApp message, real or simulated, filterable by request code. Numbers show only their last 4 digits. |
+| **Referrals** | Top referrers per city and the "Ask to thank publicly" button. |
+| **Simulation** | For demos only: simulated donors reply with a chosen mix, through the same code as real phones. |
+
+**A super admin can also:**
+
+| Area | What it does |
+|---|---|
+| **System status** | Hospitals, open requests, messages and failed sends in the last 24 hours, the last WhatsApp message received, simulation mode, allowlist size. |
+| **Accounts** | Add a coordinator or super admin with a one-time password, disable or enable, reset a password, change a role. A super admin cannot disable or demote themselves. |
+| **Hospitals** | Search the blood centre list by name or city. |
+| **Audit log** | Every console action and system event, newest first. |
+
+Neither role ever sees a list of all donors or a donor's phone number. Donors appear only on the requests they were alerted for, by first name, and every console read runs through a read-only database role.
+
+**Coordinator screens**
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="docs/console/02-queues.jpg" alt="Queues with counts per tab"><br><sub>Queues, with a count on every tab</sub></td>
+    <td align="center" width="50%"><img src="docs/console/03-request-detail.jpg" alt="Request detail"><br><sub>Request detail: facts, status, actions, slip</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/console/04-waves-and-activity.jpg" alt="Alert waves and activity log"><br><sub>Confirmed donors, alert waves and replies, activity</sub></td>
+    <td align="center"><img src="docs/console/05-message-log.jpg" alt="Message log filtered by request"><br><sub>Message log by request code, numbers masked</sub></td>
+  </tr>
+</table>
+
+**Super admin screens**
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="docs/console/08-system-status.jpg" alt="System status tiles"><br><sub>System status</sub></td>
+    <td align="center" width="50%"><img src="docs/console/09-accounts.jpg" alt="Console accounts management" width="360"><br><sub>Accounts: add, disable, reset password, change role</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/console/10-audit-log.jpg" alt="Audit log" width="360"><br><sub>Audit log</sub></td>
+    <td align="center"><img src="docs/console/07-simulation.jpg" alt="Simulation panel"><br><sub>Simulation panel for demos</sub></td>
+  </tr>
+</table>
 
 ## Tech stack
 

@@ -1,30 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="280" viewBox="0 0 1280 280">
-  <rect width="1280" height="280" fill="#faf7f7"/>
-  <rect x="40" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
-  <circle cx="80" cy="84" r="20" fill="#c81e2b"/>
-  <text x="80" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
-  <text x="64" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Family posts a request</text>
-  <text x="64" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Blood group, hospital,</text>
-  <text x="64" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">and when it is needed.</text>
-  <path d="M320 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="350" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
-  <circle cx="390" cy="84" r="20" fill="#c81e2b"/>
-  <text x="390" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
-  <text x="374" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Donors get an alert</text>
-  <text x="374" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Nearby, compatible donors</text>
-  <text x="374" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">on WhatsApp, in waves.</text>
-  <path d="M630 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="660" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
-  <circle cx="700" cy="84" r="20" fill="#c81e2b"/>
-  <text x="700" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
-  <text x="684" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Donor taps Donate</text>
-  <text x="684" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Quick health check</text>
-  <text x="684" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">and an arrival time.</text>
-  <path d="M940 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="970" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
-  <circle cx="1010" cy="84" r="20" fill="#c81e2b"/>
-  <text x="1010" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
-  <text x="994" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Verified donation</text>
-  <text x="994" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Family marks arrived.</text>
-  <text x="994" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Donor gets a certificate.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="580" viewBox="0 0 1280 580">
+  <defs>
+    <style>
+      text { font-family: Geist, Inter, system-ui, sans-serif; }
+      .card { fill: #ffffff; stroke: #ece5e5; stroke-width: 2; }
+      .num { fill: #c81e2b; }
+      .n { font-size: 20px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .t { font-size: 21px; font-weight: 600; fill: #1a1314; }
+      .s { font-size: 17px; fill: #6b5f60; }
+      .wa { fill: #dff3e6; } .wat { font-size: 14px; font-weight: 600; fill: #146c3a; }
+      .web { fill: #eee8e8; } .webt { font-size: 14px; font-weight: 600; fill: #6b5f60; }
+      .arrow { fill: none; stroke: #c81e2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="1280" height="580" fill="#faf7f7"/>
+
+  <rect class="card" x="40" y="40" width="360" height="220" rx="16"/>
+  <circle class="num" cx="82" cy="84" r="20"/><text class="n" x="82" y="91">1</text>
+  <rect class="wa" x="272" y="70" width="100" height="28" rx="14"/><text class="wat" x="322" y="89" text-anchor="middle">WhatsApp</text>
+  <text class="t" x="64" y="150">Donors join on WhatsApp</text>
+  <text class="s" x="64" y="182">Send JOIN, answer a short chat.</text>
+  <text class="s" x="64" y="208">Blood group and area, saved</text>
+  <text class="s" x="64" y="234">to about 500 m.</text>
+  <path class="arrow" d="M410 150 h28 m-8 -8 l8 8 l-8 8"/>
+
+  <rect class="card" x="460" y="40" width="360" height="220" rx="16"/>
+  <circle class="num" cx="502" cy="84" r="20"/><text class="n" x="502" y="91">2</text>
+  <rect class="web" x="692" y="70" width="100" height="28" rx="14"/><text class="webt" x="742" y="89" text-anchor="middle">Website</text>
+  <text class="t" x="484" y="150">A family asks for blood</text>
+  <text class="s" x="484" y="182">Signs in with one WhatsApp</text>
+  <text class="s" x="484" y="208">message. Hospital, patient,</text>
+  <text class="s" x="484" y="234">blood group, needed by.</text>
+  <path class="arrow" d="M830 150 h28 m-8 -8 l8 8 l-8 8"/>
+
+  <rect class="card" x="880" y="40" width="360" height="220" rx="16"/>
+  <circle class="num" cx="922" cy="84" r="20"/><text class="n" x="922" y="91">3</text>
+  <rect class="wa" x="1112" y="70" width="100" height="28" rx="14"/><text class="wat" x="1162" y="89" text-anchor="middle">WhatsApp</text>
+  <text class="t" x="904" y="150">Nearby donors are alerted</text>
+  <text class="s" x="904" y="182">Only compatible, eligible donors</text>
+  <text class="s" x="904" y="208">near the hospital, a few at a</text>
+  <text class="s" x="904" y="234">time, in their own language.</text>
+
+  <path class="arrow" d="M1060 268 v18 q0 12 -12 12 h-816 q-12 0 -12 12 v6 m-8 -8 l8 8 l8 -8"/>
+
+  <rect class="card" x="40" y="320" width="360" height="220" rx="16"/>
+  <circle class="num" cx="82" cy="364" r="20"/><text class="n" x="82" y="371">4</text>
+  <rect class="wa" x="272" y="350" width="100" height="28" rx="14"/><text class="wat" x="322" y="369" text-anchor="middle">WhatsApp</text>
+  <text class="t" x="64" y="430">A donor taps Donate</text>
+  <text class="s" x="64" y="462">Quick health check, arrival</text>
+  <text class="s" x="64" y="488">time, then the address, directions</text>
+  <text class="s" x="64" y="514">and the family's WhatsApp.</text>
+  <path class="arrow" d="M410 430 h28 m-8 -8 l8 8 l-8 8"/>
+
+  <rect class="card" x="460" y="320" width="360" height="220" rx="16"/>
+  <circle class="num" cx="502" cy="364" r="20"/><text class="n" x="502" y="371">5</text>
+  <rect class="web" x="692" y="350" width="100" height="28" rx="14"/><text class="webt" x="742" y="369" text-anchor="middle">Website</text>
+  <text class="t" x="484" y="430">Family sees who is coming</text>
+  <text class="s" x="484" y="462">A live page with first names and</text>
+  <text class="s" x="484" y="488">arrival times. They mark each</text>
+  <text class="s" x="484" y="514">donor arrived.</text>
+  <path class="arrow" d="M830 430 h28 m-8 -8 l8 8 l-8 8"/>
+
+  <rect class="card" x="880" y="320" width="360" height="220" rx="16"/>
+  <circle class="num" cx="922" cy="364" r="20"/><text class="n" x="922" y="371">6</text>
+  <rect class="wa" x="1112" y="350" width="100" height="28" rx="14"/><text class="wat" x="1162" y="369" text-anchor="middle">WhatsApp</text>
+  <text class="t" x="904" y="430">Donation verified</text>
+  <text class="s" x="904" y="462">The donor says yes, the family</text>
+  <text class="s" x="904" y="488">marked arrival. Lifegiver badge</text>
+  <text class="s" x="904" y="514">and a PDF certificate follow.</text>
 </svg>
