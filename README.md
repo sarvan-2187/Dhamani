@@ -7,6 +7,13 @@
   <a href="https://dhamani-sigma.vercel.app">dhamani-sigma.vercel.app</a>
 </p>
 
+<p align="center">
+  <a href="https://youtube.com/shorts/0sk_xS1oKW0">
+    <img src="docs/readme/demo-thumbnail.jpg" alt="Watch the Dhamani demo on YouTube: sign-up to certificate on real phones" width="260">
+  </a><br>
+  <a href="https://youtube.com/shorts/0sk_xS1oKW0"><b>Watch the demo</b></a> · 2:45, sign-up to certificate on real phones
+</p>
+
 ---
 
 When someone in hospital needs blood, the family usually starts calling everyone they know. Dhamani replaces that scramble with one request. It finds voluntary donors near the hospital whose blood group fits, asks them on WhatsApp, and shows the family who is coming, live.
