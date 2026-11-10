@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="280" viewBox="0 0 1280 280">
+  <rect width="1280" height="280" fill="#faf7f7"/>
+  <rect x="40" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
+  <circle cx="80" cy="84" r="20" fill="#c81e2b"/>
+  <text x="80" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="64" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Family posts a request</text>
+  <text x="64" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Blood group, hospital,</text>
+  <text x="64" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">and when it is needed.</text>
+  <path d="M320 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="350" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
+  <circle cx="390" cy="84" r="20" fill="#c81e2b"/>
+  <text x="390" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="374" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Donors get an alert</text>
+  <text x="374" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Nearby, compatible donors</text>
+  <text x="374" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">on WhatsApp, in waves.</text>
+  <path d="M630 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="660" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
+  <circle cx="700" cy="84" r="20" fill="#c81e2b"/>
+  <text x="700" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="684" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Donor taps Donate</text>
+  <text x="684" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Quick health check</text>
+  <text x="684" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">and an arrival time.</text>
+  <path d="M940 140 h18 m-7 -7 l7 7 l-7 7" fill="none" stroke="#c81e2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="970" y="40" width="270" height="200" rx="16" fill="#ffffff" stroke="#ece5e5" stroke-width="2"/>
+  <circle cx="1010" cy="84" r="20" fill="#c81e2b"/>
+  <text x="1010" y="91" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="994" y="146" font-family="Geist, Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#1a1314">Verified donation</text>
+  <text x="994" y="176" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Family marks arrived.</text>
+  <text x="994" y="202" font-family="Geist, Inter, system-ui, sans-serif" font-size="17" fill="#6b5f60">Donor gets a certificate.</text>
+</svg>

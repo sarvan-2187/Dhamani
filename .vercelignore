@@ -1,0 +1,6 @@
+# Never upload local secrets; production values are set with `vercel env add`.
+.env*
+!.env.example
+.next
+node_modules
+.vercel

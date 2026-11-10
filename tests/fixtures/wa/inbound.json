@@ -1,0 +1,47 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "000000000000000",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": { "display_phone_number": "15550000000", "phone_number_id": "000000000000001" },
+            "contacts": [{ "profile": { "name": "Fixture Person" }, "wa_id": "910000000998" }],
+            "messages": [
+              { "from": "910000000998", "id": "wamid.FIXTURE.text", "timestamp": "1762750000", "type": "text", "text": { "body": "JOIN" } },
+              {
+                "from": "910000000998", "id": "wamid.FIXTURE.button", "timestamp": "1762750001", "type": "interactive",
+                "interactive": { "type": "button_reply", "button_reply": { "id": "DONATE:00000000-0000-0000-0000-000000000001", "title": "Donate" } }
+              },
+              {
+                "from": "910000000998", "id": "wamid.FIXTURE.list", "timestamp": "1762750002", "type": "interactive",
+                "interactive": { "type": "list_reply", "list_reply": { "id": "GROUP:O+", "title": "O+" } }
+              },
+              {
+                "from": "910000000998", "id": "wamid.FIXTURE.quickreply", "timestamp": "1762750003", "type": "button",
+                "button": { "payload": "NOT_NOW:00000000-0000-0000-0000-000000000001", "text": "Not this time" }
+              },
+              {
+                "from": "910000000998", "id": "wamid.FIXTURE.location", "timestamp": "1762750004", "type": "location",
+                "location": { "latitude": 13.0827, "longitude": 80.2707 }
+              },
+              { "from": "910000000998", "id": "wamid.FIXTURE.image", "timestamp": "1762750005", "type": "image", "image": { "id": "1" } },
+              { "from": "not-a-number", "id": "wamid.FIXTURE.bad", "timestamp": "1762750006", "type": "text", "text": { "body": "x" } }
+            ]
+          }
+        },
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": { "display_phone_number": "15550000000", "phone_number_id": "000000000000001" },
+            "statuses": [{ "id": "wamid.FIXTURE.out", "status": "delivered", "timestamp": "1762750007", "recipient_id": "910000000998" }]
+          }
+        }
+      ]
+    }
+  ]
+}

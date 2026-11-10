@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+!.env.example
+
+# serwist (generated)
+public/sw.js
+public/sw.js.map
+public/swe-worker-*.js
+
+.vercel
+.env*
+!.env.example

@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Dark mode is toggled by a .dark class on <html>, following the system setting by default */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* .light added beyond DESIGN_SYSTEM 2.2 so /dev/ui can force a light panel inside a dark page */
+:root, .light {
+  --surface: #ffffff;
+  --surface-subtle: #faf7f7;
+  --surface-raised: #ffffff;
+  --border: #ece5e5;
+  --border-control: #8f8384;
+  --ink: #1a1314;
+  --ink-muted: #6b5f60;
+  --brand: #c81e2b;
+  --brand-hover: #a8151f;
+  --on-brand: #ffffff;
+  --brand-subtle: #fdecee;
+  --brand-ink: #9e1420;
+  --brand-deep: #a8151f;      /* the dimple in the cell mark (DESIGN_SYSTEM 7) */
+  --danger: #b3121f;
+  --success: #146c3a;
+  --success-subtle: #e8f5ed;
+  --warning: #8a4b00;
+  --warning-subtle: #fdf1e2;
+  --focus: var(--brand);
+  --elevation-card: 0 1px 2px rgba(26, 19, 20, 0.06), 0 4px 12px rgba(26, 19, 20, 0.04);
+}
+
+.dark {
+  --surface: #000000;          /* bg-black base */
+  --surface-subtle: #0f0b0b;
+  --surface-raised: #141010;
+  --border: #2a2222;
+  --border-control: #7a6e6f;
+  --ink: #f7f2f2;
+  --ink-muted: #b3a7a8;
+  --brand: #f04b57;
+  --brand-hover: #ff6a74;
+  --on-brand: #140a0b;
+  --brand-subtle: #2a0d10;
+  --brand-ink: #ff8a92;
+  --brand-deep: #8f1520;
+  --danger: #ff7a84;
+  --success: #5ccf8a;
+  --success-subtle: #0c2216;
+  --warning: #f2a640;
+  --warning-subtle: #2a1a06;
+  --elevation-card: none;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-border-control: var(--border-control);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-on-brand: var(--on-brand);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-ink: var(--brand-ink);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-success-subtle: var(--success-subtle);
+  --color-warning: var(--warning);
+  --color-warning-subtle: var(--warning-subtle);
+  --color-focus: var(--focus);
+  --color-brand-deep: var(--brand-deep);
+
+  /* shadcn/ui names, aliased to the DESIGN_SYSTEM tokens above (no new colours). */
+  --color-background: var(--surface);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface-raised);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--surface-raised);
+  --color-popover-foreground: var(--ink);
+  --color-primary: var(--brand);
+  --color-primary-foreground: var(--on-brand);
+  --color-secondary: var(--surface-subtle);
+  --color-secondary-foreground: var(--ink);
+  --color-muted: var(--surface-subtle);
+  --color-muted-foreground: var(--ink-muted);
+  --color-accent: var(--surface-subtle);
+  --color-accent-foreground: var(--ink);
+  --color-destructive: var(--danger);
+  --color-input: var(--border-control);
+  --color-ring: var(--focus);
+
+  --font-sans: var(--font-geist), var(--font-noto-tamil), var(--font-noto-telugu), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: var(--elevation-card);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Plain `border` uses the decorative border token, as shadcn/ui expects. */
+@layer base {
+  *, ::before, ::after { border-color: var(--border); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Indic scripts sit taller: add 4px line height to body and label text */
+.lang-indic { --indic-leading-boost: 4px; }
+.lang-indic body { line-height: calc(24px + var(--indic-leading-boost)); }
+
+/* Type scale (DESIGN_SYSTEM.md 4.1) */
+@utility text-display { font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em; }
+@utility text-h1 { font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.01em; }
+@utility text-h2 { font-size: 20px; line-height: 28px; font-weight: 600; }
+@utility text-body { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-label { font-size: 14px; line-height: 20px; font-weight: 500; }
+@utility text-small { font-size: 14px; line-height: 20px; font-weight: 400; color: var(--ink-muted); }
+@utility text-code { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; }
+
+/* Do not letter-space Indic text (4.2) */
+.lang-indic :is(.text-display, .text-h1) { letter-spacing: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
 }
